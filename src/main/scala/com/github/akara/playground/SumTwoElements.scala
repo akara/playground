@@ -4,7 +4,7 @@ import scala.annotation.tailrec
 
 object SumTwoElements extends App {
 
-  def findElements(a: Array[Int], sum: Int): Option[(Int, Int)] = {
+  def findElements(a: IndexedSeq[Int], sum: Int): Option[(Int, Int)] = {
 
     @tailrec
     def check(i1: Int, i2: Int): Option[(Int, Int)] = {
