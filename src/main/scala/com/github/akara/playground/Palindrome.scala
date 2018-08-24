@@ -36,11 +36,11 @@ object Palindrome extends App {
 
     // 4. Each substring of odd size n where n <= s.size / 2 + 1 can be a palindrome
     for {
-      length <- 2 to (s.length - s.length / 2)
-      index <- 0 to (s.length - (2 * length - 1))
+      length <- 1 to (s.length / 2)
+      index <- 0 to (s.length - (2 * length + 1))
     } {
       val s1 = s.substring(index, index + length)
-      val nextIdx = index + length - 1
+      val nextIdx = index + length + 1
       val s2 = s.substring(nextIdx, nextIdx + length).reverse
       if (s1 == s2) tokenCountP += 1
     }
